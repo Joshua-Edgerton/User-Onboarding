@@ -42,7 +42,6 @@ function UserForm ({errors, touched, status}) {
         
             <button className='user-button' type='submit'> Submit </button>
 
-            {/* temp */}
             <div> 
                 {users.map(user => (
                 <p>
@@ -71,7 +70,7 @@ const FormikUserForm = withFormik({
         .min(6, "Password must be 6 characters or longer")
         .required("Password is required")
         ,
-        checkbox: Yup.boolean().required().oneOf([true], 'Must Accept ')
+        checkbox: Yup.boolean().required().oneOf([true], 'Must Accept')
     }),
 
 
